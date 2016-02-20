@@ -11,7 +11,7 @@ Board.requestPort(function(error, port) {
    var board = new Board(port.comName);
    board.on("ready", function() {
      // Main part
-     console.log('connected:  ' +  modem);
+
      var ledOn = true;
      // Configure pin 13 as output
      board.pinMode(13, board.MODES.OUTPUT);
