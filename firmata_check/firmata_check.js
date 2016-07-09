@@ -1,5 +1,6 @@
 // The Firmata protocol provides a simple protocol to an embedded system
 var Board = require('firmata');
+var LED = 13;
 
 Board.requestPort(function(error, port) {
 
@@ -14,18 +15,18 @@ Board.requestPort(function(error, port) {
 
   var ledOn = true;
   // Configure pin 13 as output
-  board.pinMode(13, board.MODES.OUTPUT);
+  board.pinMode(LED, board.MODES.OUTPUT);
 
   // Blink the LED
   setInterval(function() {
-       if (ledOn) {
-         console.log('ON');
-         board.digitalWrite(13, board.HIGH);
-       } else {
-         console.log('OFF');
-         board.digitalWrite(13, board.LOW);
-}
-          ledOn = !ledOn;
-        }, 500);
+        if (ledOn) {
+           console.log('ON');
+           board.digitalWrite(LED, board.HIGH);
+        } else {
+           console.log('OFF');
+           board.digitalWrite(LED, board.LOW);
+        }
+        ledOn = !ledOn;
+      }, 500);
   });
 });
