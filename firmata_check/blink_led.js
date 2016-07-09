@@ -1,6 +1,6 @@
 // The Firmata protocol provides a simple protocol to an embedded system
 var Board = require('firmata');
-var LED = 13;
+var LED = 5;
 
 Board.requestPort(function(error, port) {
 
