@@ -8,15 +8,16 @@ Board.requestPort(function(error, port) {
      return; 
   }
 
-   var board = new Board(port.comName);
-   board.on("ready", function() {
-     // Main part
+  var board = new Board(port.comName);
+  board.on("ready", function() {
+  // Main part
 
-     var ledOn = true;
-     // Configure pin 13 as output
-     board.pinMode(13, board.MODES.OUTPUT);
-     // Blink the LED
-     setInterval(function() {
+  var ledOn = true;
+  // Configure pin 13 as output
+  board.pinMode(13, board.MODES.OUTPUT);
+
+  // Blink the LED
+  setInterval(function() {
        if (ledOn) {
          console.log('ON');
          board.digitalWrite(13, board.HIGH);

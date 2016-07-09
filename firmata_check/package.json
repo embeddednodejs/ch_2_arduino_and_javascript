@@ -1,5 +1,5 @@
 {
-  "name": "firmata",
+  "name": "hello_firmata",
   "version": "1.0.0",
   "description": "",
   "main": "firmata_check.js",
@@ -9,5 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "firmata": "^0.13.0"
+  }
 }
